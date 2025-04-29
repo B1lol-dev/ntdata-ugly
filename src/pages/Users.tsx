@@ -1,18 +1,17 @@
-import { useEffect, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import axios from "axios";
 
 import { IUser } from "../constants/interfaces";
+import { API_URL } from "../constants/constants";
 
-export const Users = () => {
+export const Users = (): ReactElement => {
   const [users, setUsers] = useState<IUser[]>([]);
   const [error, setError] = useState("");
 
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get(
-          "https://jsonplaceholder.typicode.com/users"
-        );
+        const response = await axios.get(`${API_URL}/users`);
         setUsers(response.data);
       } catch (err) {
         setError("Error fetching users!");
