@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router";
 // components
 import { Users } from "./pages/Users";
 import { Posts } from "./pages/Posts";
+import { Comments } from "./pages/Comments";
 
 function App() {
   const paths = [
@@ -39,6 +40,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Users />} />
             <Route path="/posts" element={<Posts />} />
+            <Route path="/comments" element={<Comments />} />
           </Routes>
         </main>
         <footer className="p-4 bg-cyan-300 text-center border-t-8 border-dotted border-red-600 block!">
