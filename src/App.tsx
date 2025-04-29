@@ -39,12 +39,12 @@ function App() {
             <Route path="/" element={<Users />} />
           </Routes>
         </main>
-        <footer className="p-4 bg-cyan-300 text-center border-t-8 border-dotted border-red-600">
+        <footer className="p-4 bg-cyan-300 text-center border-t-8 border-dotted border-red-600 block!">
           <p className="text-xl font-bold text-purple-800">
             👎 Made with terrible taste 👎
           </p>
           <div className="mt-2 text-sm text-red-700 animate-bounce">
-            Copyright &copy; {new Date().getFullYear()} Ugly App Inc.
+            Copyright &copy; {new Date().getFullYear()} B1lol-dev
           </div>
         </footer>
       </div>
