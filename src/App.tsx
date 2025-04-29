@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router";
 
 // components
 import { Users } from "./pages/Users";
+import { Posts } from "./pages/Posts";
 
 function App() {
   const paths = [
@@ -37,6 +38,7 @@ function App() {
         <main className="p-4 bg-orange-200 min-h-[80vh] border-l-8 border-r-8 border-purple-500">
           <Routes>
             <Route path="/" element={<Users />} />
+            <Route path="/posts" element={<Posts />} />
           </Routes>
         </main>
         <footer className="p-4 bg-cyan-300 text-center border-t-8 border-dotted border-red-600 block!">
