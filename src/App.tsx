@@ -1,6 +1,14 @@
 import { BrowserRouter, Routes, Link } from "react-router";
 
 function App() {
+  const paths = [
+    { path: "/", label: "👤 USERS" },
+    { path: "/posts", label: "📝 POSTS" },
+    { path: "/comments", label: "💬 COMMENTS" },
+    { path: "/albums", label: "🖼️ ALBUMS" },
+    { path: "/todos", label: "✅ TODOS" },
+  ];
+
   return (
     <BrowserRouter>
       <div className="min-h-screen bg-gradient-to-r from-yellow-300 via-pink-500 to-purple-700">
@@ -12,13 +20,7 @@ function App() {
             The WORST app you've ever seen! Scrolling text is back baby!!!
           </h1>
           <nav className="mt-4 flex flex-wrap justify-center gap-2">
-            {[
-              { path: "/", label: "👤 USERS" },
-              { path: "/posts", label: "📝 POSTS" },
-              { path: "/comments", label: "💬 COMMENTS" },
-              { path: "/albums", label: "🖼️ ALBUMS" },
-              { path: "/todos", label: "✅ TODOS" },
-            ].map((link) => (
+            {paths.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
