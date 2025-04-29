@@ -1,1 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap");
 @import "tailwindcss";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Comic Neue", cursive;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="hotpink" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>'),
+    auto;
+}
+
+.font-comic {
+  font-family: "Comic Neue", cursive;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes rotate-hue {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.animate-hue {
+  animation: rotate-hue 5s infinite linear;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff0000, #ffff00);
+  border-radius: 10px;
+  border: 2px dashed #00ff00;
+}
+
+/* selected text */
+::selection {
+  background-color: #ff00ff;
+  color: #00ff00;
+}
