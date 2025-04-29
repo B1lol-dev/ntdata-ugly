@@ -1,4 +1,7 @@
-import { BrowserRouter, Routes, Link } from "react-router";
+import { BrowserRouter, Routes, Route, Link } from "react-router";
+
+// components
+import { Users } from "./pages/Users";
 
 function App() {
   const paths = [
@@ -32,7 +35,9 @@ function App() {
           </nav>
         </header>
         <main className="p-4 bg-orange-200 min-h-[80vh] border-l-8 border-r-8 border-purple-500">
-          <Routes></Routes>
+          <Routes>
+            <Route path="/" element={<Users />} />
+          </Routes>
         </main>
         <footer className="p-4 bg-cyan-300 text-center border-t-8 border-dotted border-red-600">
           <p className="text-xl font-bold text-purple-800">
