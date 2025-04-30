@@ -38,3 +38,10 @@ export interface IAlbum {
   userId: number;
   title: string;
 }
+
+export interface ITodo {
+  id: number;
+  userId: number;
+  title: string;
+  completed: boolean;
+}

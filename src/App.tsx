@@ -5,6 +5,7 @@ import { Users } from "./pages/Users";
 import { Posts } from "./pages/Posts";
 import { Comments } from "./pages/Comments";
 import { Albums } from "./pages/Albums";
+import { Todos } from "./pages/Todos";
 
 function App() {
   const paths = [
@@ -43,6 +44,7 @@ function App() {
             <Route path="/posts" element={<Posts />} />
             <Route path="/comments" element={<Comments />} />
             <Route path="/albums" element={<Albums />} />
+            <Route path="/todos" element={<Todos />} />
           </Routes>
         </main>
         <footer className="p-4 bg-cyan-300 text-center border-t-8 border-dotted border-red-600 block!">
