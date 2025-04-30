@@ -32,3 +32,9 @@ export interface IComment {
   email: string;
   body: string;
 }
+
+export interface IAlbum {
+  id: number;
+  userId: number;
+  title: string;
+}
